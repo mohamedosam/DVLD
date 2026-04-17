@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1BFF141-BA44-4160-AC44-CDCF1BB548F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DVLD_Project</RootNamespace>
+    <AssemblyName>DVLD Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Busniss Layer\ClsApplication.cs">
+      <Link>DVLD\Busniss Layer\ClsApplication.cs</Link>
+    </Compile>
+    <Compile Include="..\Busniss Layer\ClsCountryBUS.cs">
+      <Link>DVLD\Busniss Layer\ClsCountryBUS.cs</Link>
+    </Compile>
+    <Compile Include="..\Busniss Layer\ClsLocalApplicationInfo.cs">
+      <Link>DVLD\Busniss Layer\ClsLocalApplicationInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Busniss Layer\ClsPersonBus.cs">
+      <Link>DVLD\Busniss Layer\ClsPersonBus.cs</Link>
+    </Compile>
+    <Compile Include="..\Busniss Layer\ClsTestAndAppointmentsBUS.cs">
+      <Link>DVLD\Busniss Layer\ClsTestAndAppointmentsBUS.cs</Link>
+    </Compile>
+    <Compile Include="..\Busniss Layer\ClsUserBus.cs">
+      <Link>DVLD\Busniss Layer\ClsUserBus.cs</Link>
+    </Compile>
+    <Compile Include="..\Busniss Layer\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs">
+      <Link>DVLD\Busniss Layer\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\Busniss Layer\Properties\AssemblyInfo.cs">
+      <Link>DVLD\Busniss Layer\Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\DataLayer\ClsCountryData.cs">
+      <Link>DVLD\DataLayer\ClsCountryData.cs</Link>
+    </Compile>
+    <Compile Include="..\DataLayer\ClsDataLayerSettings.cs">
+      <Link>DVLD\DataLayer\ClsDataLayerSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\DataLayer\ClsLApplicationsData.cs">
+      <Link>DVLD\DataLayer\ClsLApplicationsData.cs</Link>
+    </Compile>
+    <Compile Include="..\DataLayer\ClsTestsAndAppointmentsData.cs">
+      <Link>DVLD\DataLayer\ClsTestsAndAppointmentsData.cs</Link>
+    </Compile>
+    <Compile Include="..\DataLayer\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs">
+      <Link>DVLD\DataLayer\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\DataLayer\PersonsData.cs">
+      <Link>DVLD\DataLayer\PersonsData.cs</Link>
+    </Compile>
+    <Compile Include="..\DataLayer\Properties\AssemblyInfo.cs">
+      <Link>DVLD\DataLayer\Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\DataLayer\UsersData.cs">
+      <Link>DVLD\DataLayer\UsersData.cs</Link>
+    </Compile>
+    <Compile Include="AddLocalLicenseSecondPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddLocalLicenseSecondPage.Designer.cs">
+      <DependentUpon>AddLocalLicenseSecondPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUserSecondPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddUserSecondPage.Designer.cs">
+      <DependentUpon>AddUserSecondPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buttons\TaskMenuItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\TaskMenuItem.Designer.cs">
+      <DependentUpon>TaskMenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClsGlobal.cs" />
+    <Compile Include="frmAddLicenseApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddLicenseApplication.Designer.cs">
+      <DependentUpon>frmAddLicenseApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddNewLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewLicense.Designer.cs">
+      <DependentUpon>frmAddNewLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewUser.Designer.cs">
+      <DependentUpon>frmAddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAppointments.Designer.cs">
+      <DependentUpon>frmAppointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIssueaDriverLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIssueaDriverLicense.Designer.cs">
+      <DependentUpon>frmIssueaDriverLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocalDLApplicationinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocalDLApplicationinfo.Designer.cs">
+      <DependentUpon>frmLocalDLApplicationinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScheduleTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScheduleTest.Designer.cs">
+      <DependentUpon>frmScheduleTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettingMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettingMenu.Designer.cs">
+      <DependentUpon>frmSettingMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowLDLDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowLDLDetails.Designer.cs">
+      <DependentUpon>frmShowLDLDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTakeTestcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTakeTestcs.Designer.cs">
+      <DependentUpon>frmTakeTestcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ApplicationsUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\ApplicationsUI.Designer.cs">
+      <DependentUpon>ApplicationsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DefultUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\DefultUI.Designer.cs">
+      <DependentUpon>DefultUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DetainLicenseUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\DetainLicenseUI.Designer.cs">
+      <DependentUpon>DetainLicenseUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DriverLicensesServicesUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\DriverLicensesServicesUI.Designer.cs">
+      <DependentUpon>DriverLicensesServicesUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddNewPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewPerson.Designer.cs">
+      <DependentUpon>frmAddNewPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddApplicationUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\AddApplicationUI.Designer.cs">
+      <DependentUpon>AddApplicationUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LocalDriverLicenseApplicationsUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\LocalDriverLicenseApplicationsUI.Designer.cs">
+      <DependentUpon>LocalDriverLicenseApplicationsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManageApplicationsUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\ManageApplicationsUI.Designer.cs">
+      <DependentUpon>ManageApplicationsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buttons\MenuItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\MenuItem.Designer.cs">
+      <DependentUpon>MenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PeopleManagmentUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\PeopleManagmentUI.Designer.cs">
+      <DependentUpon>PeopleManagmentUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonSearchBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PersonSearchBar.Designer.cs">
+      <DependentUpon>PersonSearchBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShowDetails.Designer.cs">
+      <DependentUpon>ShowDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowPersonDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowPersonDetails.Designer.cs">
+      <DependentUpon>frmShowPersonDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buttons\TransactionCards.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\TransactionCards.Designer.cs">
+      <DependentUpon>TransactionCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buttons\UcBtn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\UcBtn.Designer.cs">
+      <DependentUpon>UcBtn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserMangmentUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\UserMangmentUI.Designer.cs">
+      <DependentUpon>UserMangmentUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowUserDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowUserDetails.Designer.cs">
+      <DependentUpon>frmShowUserDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcApplicationDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcApplicationDetails.Designer.cs">
+      <DependentUpon>UcApplicationDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucScheduleTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucScheduleTest.Designer.cs">
+      <DependentUpon>ucScheduleTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLofinInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserLofinInfo.Designer.cs">
+      <DependentUpon>UserLofinInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddLocalLicenseSecondPage.resx">
+      <DependentUpon>AddLocalLicenseSecondPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUserSecondPage.resx">
+      <DependentUpon>AddUserSecondPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buttons\TaskMenuItem.resx">
+      <DependentUpon>TaskMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddLicenseApplication.resx">
+      <DependentUpon>frmAddLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddNewLicense.resx">
+      <DependentUpon>frmAddNewLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddNewUser.resx">
+      <DependentUpon>frmAddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAppointments.resx">
+      <DependentUpon>frmAppointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIssueaDriverLicense.resx">
+      <DependentUpon>frmIssueaDriverLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocalDLApplicationinfo.resx">
+      <DependentUpon>frmLocalDLApplicationinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScheduleTest.resx">
+      <DependentUpon>frmScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettingMenu.resx">
+      <DependentUpon>frmSettingMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowLDLDetails.resx">
+      <DependentUpon>frmShowLDLDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTakeTestcs.resx">
+      <DependentUpon>frmTakeTestcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ApplicationsUI.resx">
+      <DependentUpon>ApplicationsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\DefultUI.resx">
+      <DependentUpon>DefultUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\DetainLicenseUI.resx">
+      <DependentUpon>DetainLicenseUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\DriverLicensesServicesUI.resx">
+      <DependentUpon>DriverLicensesServicesUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddNewPerson.resx">
+      <DependentUpon>frmAddNewPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AddApplicationUI.resx">
+      <DependentUpon>AddApplicationUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\LocalDriverLicenseApplicationsUI.resx">
+      <DependentUpon>LocalDriverLicenseApplicationsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ManageApplicationsUI.resx">
+      <DependentUpon>ManageApplicationsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buttons\MenuItem.resx">
+      <DependentUpon>MenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PeopleManagmentUI.resx">
+      <DependentUpon>PeopleManagmentUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonSearchBar.resx">
+      <DependentUpon>PersonSearchBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ShowDetails.resx">
+      <DependentUpon>ShowDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowPersonDetails.resx">
+      <DependentUpon>frmShowPersonDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buttons\TransactionCards.resx">
+      <DependentUpon>TransactionCards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buttons\UcBtn.resx">
+      <DependentUpon>UcBtn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\UserMangmentUI.resx">
+      <DependentUpon>UserMangmentUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowUserDetails.resx">
+      <DependentUpon>frmShowUserDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcApplicationDetails.resx">
+      <DependentUpon>UcApplicationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucScheduleTest.resx">
+      <DependentUpon>ucScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLofinInfo.resx">
+      <DependentUpon>UserLofinInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\Busniss Layer\.vs\Busniss Layer.csproj.dtbcache.json">
+      <Link>DVLD\Busniss Layer\.vs\Busniss Layer.csproj.dtbcache.json</Link>
+    </None>
+    <None Include="..\Busniss Layer\App.config">
+      <Link>DVLD\Busniss Layer\App.config</Link>
+    </None>
+    <None Include="..\Busniss Layer\bin\Debug\Busniss Layer.dll.config">
+      <Link>DVLD\Busniss Layer\bin\Debug\Busniss Layer.dll.config</Link>
+    </None>
+    <None Include="..\Busniss Layer\bin\Debug\DataLayer.dll.config">
+      <Link>DVLD\Busniss Layer\bin\Debug\DataLayer.dll.config</Link>
+    </None>
+    <None Include="..\Busniss Layer\Busniss Layer.csproj">
+      <Link>DVLD\Busniss Layer\Busniss Layer.csproj</Link>
+    </None>
+    <None Include="..\Busniss Layer\obj\Debug\Busniss .760485DD.Up2Date">
+      <Link>DVLD\Busniss Layer\obj\Debug\Busniss .760485DD.Up2Date</Link>
+    </None>
+    <None Include="..\Busniss Layer\obj\Debug\Busniss Layer.csproj.AssemblyReference.cache">
+      <Link>DVLD\Busniss Layer\obj\Debug\Busniss Layer.csproj.AssemblyReference.cache</Link>
+    </None>
+    <None Include="..\Busniss Layer\obj\Debug\Busniss Layer.csproj.CoreCompileInputs.cache">
+      <Link>DVLD\Busniss Layer\obj\Debug\Busniss Layer.csproj.CoreCompileInputs.cache</Link>
+    </None>
+    <None Include="..\Busniss Layer\obj\Debug\DesignTimeResolveAssemblyReferences.cache">
+      <Link>DVLD\Busniss Layer\obj\Debug\DesignTimeResolveAssemblyReferences.cache</Link>
+    </None>
+    <None Include="..\Busniss Layer\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache">
+      <Link>DVLD\Busniss Layer\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache</Link>
+    </None>
+    <None Include="..\DataLayer\.vs\DataLayer.csproj.dtbcache.json">
+      <Link>DVLD\DataLayer\.vs\DataLayer.csproj.dtbcache.json</Link>
+    </None>
+    <None Include="..\DataLayer\App.config">
+      <Link>DVLD\DataLayer\App.config</Link>
+    </None>
+    <None Include="..\DataLayer\bin\Debug\DataLayer.dll.config">
+      <Link>DVLD\DataLayer\bin\Debug\DataLayer.dll.config</Link>
+    </None>
+    <None Include="..\DataLayer\DataLayer.csproj">
+      <Link>DVLD\DataLayer\DataLayer.csproj</Link>
+    </None>
+    <None Include="..\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache">
+      <Link>DVLD\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache</Link>
+    </None>
+    <None Include="..\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache">
+      <Link>DVLD\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache</Link>
+    </None>
+    <None Include="..\DataLayer\obj\Debug\DesignTimeResolveAssemblyReferences.cache">
+      <Link>DVLD\DataLayer\obj\Debug\DesignTimeResolveAssemblyReferences.cache</Link>
+    </None>
+    <None Include="..\DataLayer\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache">
+      <Link>DVLD\DataLayer\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache</Link>
+    </None>
+    <None Include=".vs" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Busniss Layer\Busniss Layer.csproj">
+      <Project>{f34c0a4c-337a-4af2-b57d-5adfa133738d}</Project>
+      <Name>Busniss Layer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Busniss Layer\bin\Debug\Busniss Layer.dll">
+      <Link>DVLD\Busniss Layer\bin\Debug\Busniss Layer.dll</Link>
+    </Content>
+    <Content Include="..\Busniss Layer\bin\Debug\Busniss Layer.pdb">
+      <Link>DVLD\Busniss Layer\bin\Debug\Busniss Layer.pdb</Link>
+    </Content>
+    <Content Include="..\Busniss Layer\bin\Debug\DataLayer.dll">
+      <Link>DVLD\Busniss Layer\bin\Debug\DataLayer.dll</Link>
+    </Content>
+    <Content Include="..\Busniss Layer\bin\Debug\DataLayer.pdb">
+      <Link>DVLD\Busniss Layer\bin\Debug\DataLayer.pdb</Link>
+    </Content>
+    <Content Include="..\Busniss Layer\obj\Debug\Busniss Layer.csproj.FileListAbsolute.txt">
+      <Link>DVLD\Busniss Layer\obj\Debug\Busniss Layer.csproj.FileListAbsolute.txt</Link>
+    </Content>
+    <Content Include="..\Busniss Layer\obj\Debug\Busniss Layer.dll">
+      <Link>DVLD\Busniss Layer\obj\Debug\Busniss Layer.dll</Link>
+    </Content>
+    <Content Include="..\Busniss Layer\obj\Debug\Busniss Layer.pdb">
+      <Link>DVLD\Busniss Layer\obj\Debug\Busniss Layer.pdb</Link>
+    </Content>
+    <Content Include="..\DataLayer\bin\Debug\DataLayer.dll">
+      <Link>DVLD\DataLayer\bin\Debug\DataLayer.dll</Link>
+    </Content>
+    <Content Include="..\DataLayer\bin\Debug\DataLayer.pdb">
+      <Link>DVLD\DataLayer\bin\Debug\DataLayer.pdb</Link>
+    </Content>
+    <Content Include="..\DataLayer\obj\Debug\DataLayer.csproj.FileListAbsolute.txt">
+      <Link>DVLD\DataLayer\obj\Debug\DataLayer.csproj.FileListAbsolute.txt</Link>
+    </Content>
+    <Content Include="..\DataLayer\obj\Debug\DataLayer.dll">
+      <Link>DVLD\DataLayer\obj\Debug\DataLayer.dll</Link>
+    </Content>
+    <Content Include="..\DataLayer\obj\Debug\DataLayer.pdb">
+      <Link>DVLD\DataLayer\obj\Debug\DataLayer.pdb</Link>
+    </Content>
+    <Content Include="..\DVLD %281%29.png">
+      <Link>DVLD\DVLD %281%29.png</Link>
+    </Content>
+    <Content Include="..\ICONS\address %281%29.png">
+      <Link>DVLD\ICONS\address %281%29.png</Link>
+    </Content>
+    <Content Include="..\ICONS\address.png">
+      <Link>DVLD\ICONS\address.png</Link>
+    </Content>
+    <Content Include="..\ICONS\admin.png">
+      <Link>DVLD\ICONS\admin.png</Link>
+    </Content>
+    <Content Include="..\ICONS\admin_female.png">
+      <Link>DVLD\ICONS\admin_female.png</Link>
+    </Content>
+    <Content Include="..\ICONS\arrow_left.png">
+      <Link>DVLD\ICONS\arrow_left.png</Link>
+    </Content>
+    <Content Include="..\ICONS\arrow_right.png">
+      <Link>DVLD\ICONS\arrow_right.png</Link>
+    </Content>
+    <Content Include="..\ICONS\backup.png">
+      <Link>DVLD\ICONS\backup.png</Link>
+    </Content>
+    <Content Include="..\ICONS\books.png">
+      <Link>DVLD\ICONS\books.png</Link>
+    </Content>
+    <Content Include="..\ICONS\calendar_day %281%29.png">
+      <Link>DVLD\ICONS\calendar_day %281%29.png</Link>
+    </Content>
+    <Content Include="..\ICONS\calendar_day.png">
+      <Link>DVLD\ICONS\calendar_day.png</Link>
+    </Content>
+    <Content Include="..\ICONS\calendar_year.png">
+      <Link>DVLD\ICONS\calendar_year.png</Link>
+    </Content>
+    <Content Include="..\ICONS\cancel.png">
+      <Link>DVLD\ICONS\cancel.png</Link>
+    </Content>
+    <Content Include="..\ICONS\car.png">
+      <Link>DVLD\ICONS\car.png</Link>
+    </Content>
+    <Content Include="..\ICONS\checkbox_cross.png">
+      <Link>DVLD\ICONS\checkbox_cross.png</Link>
+    </Content>
+    <Content Include="..\ICONS\check_mark.png">
+      <Link>DVLD\ICONS\check_mark.png</Link>
+    </Content>
+    <Content Include="..\ICONS\close %282%29.png">
+      <Link>DVLD\ICONS\close %282%29.png</Link>
+    </Content>
+    <Content Include="..\ICONS\credit_card.png">
+      <Link>DVLD\ICONS\credit_card.png</Link>
+    </Content>
+    <Content Include="..\ICONS\depositphotos_39258143-stock-illustration-businessman-avatar-profile-picture.jpg">
+      <Link>DVLD\ICONS\depositphotos_39258143-stock-illustration-businessman-avatar-profile-picture.jpg</Link>
+    </Content>
+    <Content Include="..\ICONS\document.png">
+      <Link>DVLD\ICONS\document.png</Link>
+    </Content>
+    <Content Include="..\ICONS\document2.png">
+      <Link>DVLD\ICONS\document2.png</Link>
+    </Content>
+    <Content Include="..\ICONS\edit.png">
+      <Link>DVLD\ICONS\edit.png</Link>
+    </Content>
+    <Content Include="..\ICONS\edit2.png">
+      <Link>DVLD\ICONS\edit2.png</Link>
+    </Content>
+    <Content Include="..\ICONS\envelope.png">
+      <Link>DVLD\ICONS\envelope.png</Link>
+    </Content>
+    <Content Include="..\ICONS\envelope_open.png">
+      <Link>DVLD\ICONS\envelope_open.png</Link>
+    </Content>
+    <Content Include="..\ICONS\exam.png">
+      <Link>DVLD\ICONS\exam.png</Link>
+    </Content>
+    <Content Include="..\ICONS\eye_open.png">
+      <Link>DVLD\ICONS\eye_open.png</Link>
+    </Content>
+    <Content Include="..\ICONS\files.png">
+      <Link>DVLD\ICONS\files.png</Link>
+    </Content>
+    <Content Include="..\ICONS\flight_attendant_male.png">
+      <Link>DVLD\ICONS\flight_attendant_male.png</Link>
+    </Content>
+    <Content Include="..\ICONS\gear.png">
+      <Link>DVLD\ICONS\gear.png</Link>
+    </Content>
+    <Content Include="..\ICONS\gear_clean.png">
+      <Link>DVLD\ICONS\gear_clean.png</Link>
+    </Content>
+    <Content Include="..\ICONS\Gemini_Generated_Image_y3bq9xy3bq9xy3bq-removebg-preview.ico">
+      <Link>DVLD\ICONS\Gemini_Generated_Image_y3bq9xy3bq9xy3bq-removebg-preview.ico</Link>
+    </Content>
+    <Content Include="..\ICONS\Gemini_Generated_Image_y3bq9xy3bq9xy3bq-removebg-preview.png">
+      <Link>DVLD\ICONS\Gemini_Generated_Image_y3bq9xy3bq9xy3bq-removebg-preview.png</Link>
+    </Content>
+    <Content Include="..\ICONS\Gemini_Generated_Image_y3bq9xy3bq9xy3bq.png">
+      <Link>DVLD\ICONS\Gemini_Generated_Image_y3bq9xy3bq9xy3bq.png</Link>
+    </Content>
+    <Content Include="..\ICONS\geography.png">
+      <Link>DVLD\ICONS\geography.png</Link>
+    </Content>
+    <Content Include="..\ICONS\grou22p.png">
+      <Link>DVLD\ICONS\grou22p.png</Link>
+    </Content>
+    <Content Include="..\ICONS\group.png">
+      <Link>DVLD\ICONS\group.png</Link>
+    </Content>
+    <Content Include="..\ICONS\group2.png">
+      <Link>DVLD\ICONS\group2.png</Link>
+    </Content>
+    <Content Include="..\ICONS\id %281%29.png">
+      <Link>DVLD\ICONS\id %281%29.png</Link>
+    </Content>
+    <Content Include="..\ICONS\id %282%29.png">
+      <Link>DVLD\ICONS\id %282%29.png</Link>
+    </Content>
+    <Content Include="..\ICONS\id %282%29222.png">
+      <Link>DVLD\ICONS\id %282%29222.png</Link>
+    </Content>
+    <Content Include="..\ICONS\id %283%29.png">
+      <Link>DVLD\ICONS\id %283%29.png</Link>
+    </Content>
+    <Content Include="..\ICONS\id %283%29222.png">
+      <Link>DVLD\ICONS\id %283%29222.png</Link>
+    </Content>
+    <Content Include="..\ICONS\id %284%29.png">
+      <Link>DVLD\ICONS\id %284%29.png</Link>
+    </Content>
+    <Content Include="..\ICONS\id %285%29.png">
+      <Link>DVLD\ICONS\id %285%29.png</Link>
+    </Content>
+    <Content Include="..\ICONS\id.ico">
+      <Link>DVLD\ICONS\id.ico</Link>
+    </Content>
+    <Content Include="..\ICONS\id1.ico">
+      <Link>DVLD\ICONS\id1.ico</Link>
+    </Content>
+    <Content Include="..\ICONS\id2222.png">
+      <Link>DVLD\ICONS\id2222.png</Link>
+    </Content>
+    <Content Include="..\ICONS\Image.jpg">
+      <Link>DVLD\ICONS\Image.jpg</Link>
+    </Content>
+    <Content Include="..\ICONS\istockphoto-2212478723-612x612.jpg">
+      <Link>DVLD\ICONS\istockphoto-2212478723-612x612.jpg</Link>
+    </Content>
+    <Content Include="..\ICONS\location %281%29.png">
+      <Link>DVLD\ICONS\location %281%29.png</Link>
+    </Content>
+    <Content Include="..\ICONS\location.png">
+      <Link>DVLD\ICONS\location.png</Link>
+    </Content>
+    <Content Include="..\ICONS\location2.png">
+      <Link>DVLD\ICONS\location2.png</Link>
+    </Content>
+    <Content Include="..\ICONS\login %281%29.png">
+      <Link>DVLD\ICONS\login %281%29.png</Link>
+    </Content>
+    <Content Include="..\ICONS\login %2811%29.png">
+      <Link>DVLD\ICONS\login %2811%29.png</Link>
+    </Content>
+    <Content Include="..\ICONS\password.png">
+      <Link>DVLD\ICONS\password.png</Link>
+    </Content>
+    <Content Include="..\ICONS\paste.png">
+      <Link>DVLD\ICONS\paste.png</Link>
+    </Content>
+    <Content Include="..\ICONS\person_boy.png">
+      <Link>DVLD\ICONS\person_boy.png</Link>
+    </Content>
+    <Content Include="..\ICONS\service_telephone.png">
+      <Link>DVLD\ICONS\service_telephone.png</Link>
+    </Content>
+    <Content Include="..\ICONS\sign_out.png">
+      <Link>DVLD\ICONS\sign_out.png</Link>
+    </Content>
+    <Content Include="..\ICONS\stamped_pape2r.png">
+      <Link>DVLD\ICONS\stamped_pape2r.png</Link>
+    </Content>
+    <Content Include="..\ICONS\stamped_paper.png">
+      <Link>DVLD\ICONS\stamped_paper.png</Link>
+    </Content>
+    <Content Include="..\ICONS\traffic_light.png">
+      <Link>DVLD\ICONS\traffic_light.png</Link>
+    </Content>
+    <Content Include="..\ICONS\trash_can.png">
+      <Link>DVLD\ICONS\trash_can.png</Link>
+    </Content>
+    <Content Include="..\ICONS\user %281%29add.png">
+      <Link>DVLD\ICONS\user %281%29add.png</Link>
+    </Content>
+    <Content Include="..\ICONS\user1.png">
+      <Link>DVLD\ICONS\user1.png</Link>
+    </Content>
+    <Content Include="..\ICONS\users.png">
+      <Link>DVLD\ICONS\users.png</Link>
+    </Content>
+    <Content Include="..\ICONS\wallet.png">
+      <Link>DVLD\ICONS\wallet.png</Link>
+    </Content>
+    <Content Include="..\Log.txt">
+      <Link>DVLD\Log.txt</Link>
+    </Content>
+    <Content Include="DVLD Project.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DVLD\Busniss Layer\bin\Release\" />
+    <Folder Include="DVLD\Busniss Layer\obj\Debug\TempPE\" />
+    <Folder Include="DVLD\DataLayer\bin\Release\" />
+    <Folder Include="DVLD\DataLayer\obj\Debug\TempPE\" />
+    <Folder Include="DVLD\DVLD Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
