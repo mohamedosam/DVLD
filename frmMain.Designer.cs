@@ -40,6 +40,7 @@
             this.menuItem2 = new DVLD_Project.CtrlMenuItem();
             this.menuItem1 = new DVLD_Project.CtrlMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.localDriverLicenseApplicationsUI = new DVLD_Project.Pages.LocalDriverLicenseApplicationsUI();
             this.addApplicationUI = new DVLD_Project.AddApplicationUI();
             this.manageApplicationsUI1 = new DVLD_Project.ManageApplicationsUI();
             this.detainLicenseUI1 = new DVLD_Project.DetainLicenseUI();
@@ -49,7 +50,6 @@
             this.userMangmentUI1 = new DVLD_Project.UserMangmentUI();
             this.driverLicensesServicesUI1 = new DVLD_Project.DriverLicensesServicesUI();
             this.pbClose = new System.Windows.Forms.PictureBox();
-            this.localDriverLicenseApplicationsUI = new DVLD_Project.Pages.LocalDriverLicenseApplicationsUI();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -167,6 +167,7 @@
             this.menuItem1.Size = new System.Drawing.Size(263, 73);
             this.menuItem1.TabIndex = 0;
             this.menuItem1.Title = "Application";
+            this.menuItem1.Load += new System.EventHandler(this.menuItem1_Load);
             this.menuItem1.Click += new System.EventHandler(this.menuItem1_Click);
             // 
             // panel2
@@ -184,6 +185,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(886, 625);
             this.panel2.TabIndex = 1;
+            // 
+            // localDriverLicenseApplicationsUI
+            // 
+            this.localDriverLicenseApplicationsUI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
+            this.localDriverLicenseApplicationsUI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.localDriverLicenseApplicationsUI.Location = new System.Drawing.Point(0, 0);
+            this.localDriverLicenseApplicationsUI.Name = "localDriverLicenseApplicationsUI";
+            this.localDriverLicenseApplicationsUI.Size = new System.Drawing.Size(886, 625);
+            this.localDriverLicenseApplicationsUI.TabIndex = 8;
+            this.localDriverLicenseApplicationsUI.Load += new System.EventHandler(this.localDriverLicenseApplicationsUI_Load);
             // 
             // addApplicationUI
             // 
@@ -274,15 +285,6 @@
             this.pbClose.TabIndex = 45;
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
-            // 
-            // localDriverLicenseApplicationsUI
-            // 
-            this.localDriverLicenseApplicationsUI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(54)))), ((int)(((byte)(79)))));
-            this.localDriverLicenseApplicationsUI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.localDriverLicenseApplicationsUI.Location = new System.Drawing.Point(0, 0);
-            this.localDriverLicenseApplicationsUI.Name = "localDriverLicenseApplicationsUI";
-            this.localDriverLicenseApplicationsUI.Size = new System.Drawing.Size(886, 625);
-            this.localDriverLicenseApplicationsUI.TabIndex = 8;
             // 
             // frmMain
             // 

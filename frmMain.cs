@@ -77,7 +77,6 @@ namespace DVLD_Project
 
 
             panel2.Controls.Remove(pbClose);
-
             this.Controls.Add(pbClose);
             pbClose.BringToFront();
             pbClose.Location = new Point(this.ClientSize.Width - pbClose.Width - 10, 10);
@@ -219,6 +218,16 @@ namespace DVLD_Project
         }
 
         private void addApplicationUI_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void localDriverLicenseApplicationsUI_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuItem1_Load(object sender, EventArgs e)
         {
 
         }
